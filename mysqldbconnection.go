@@ -6,7 +6,6 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
-
 	"github.com/gorilla/mux"
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -18,7 +17,7 @@ type Book struct {
 }
 
 func main() {
-	db, err := sql.Open("mysql", "root:Revanth@1436@tcp(172.17.0.5:3306)/Books")
+	db, err := sql.Open("mysql", "root:Revanth@1436@tcp(172.19.0.1:3306)/Books")
 	if err != nil {
 		log.Fatal(err)
 	}
